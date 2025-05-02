@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Netflix Visualization – Documentation</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 40px;
+      margin: 40px auto;
       max-width: 900px;
       line-height: 1.6;
     }
     h1, h2 {
-      color: #333;
+      color: #222;
     }
     iframe {
       width: 100%;
       height: 400px;
-      margin-top: 10px;
-      border: 1px solid #ccc;
+      margin: 20px 0;
+      border: none;
     }
     img {
       width: 100%;
       max-width: 600px;
-      border: 1px solid #ddd;
       margin: 15px 0;
+      border: 1px solid #ccc;
     }
     a {
-      color: blue;
-      text-decoration: underline;
+      color: #1a73e8;
     }
   </style>
 </head>
@@ -37,39 +37,43 @@
 
   <h2>Design Process</h2>
   <p>
-    I started by exploring the Netflix Titles dataset, which contains metadata about over 8,000 titles including movies and TV shows. I brainstormed questions that would be interesting to explore, such as: When was the most content released? Which genres are most popular in which countries? How do durations vary over time?
+    I explored the Netflix Titles dataset, which includes metadata for over 8,000 titles. My goal was to visually answer key questions such as:
+    When was the most content released? Which genres dominate specific countries? And how do movies and shows differ in duration?
   </p>
   <p>
-    I sketched initial layout ideas on paper to help decide the layout and structure of the final interface. The project evolved through multiple iterations where I adjusted axes, filtered invalid data, refined tooltips, and tested different chart types.
+    After sketching initial ideas, I built several visualizations using D3.js — including a scatterplot, bar chart, and line chart — while continuously refining filters and styling based on the insights I found.
   </p>
 
-  <!-- Optional sketch placeholder -->
-  <img src="sketch-placeholder.png" alt="Sketch of layout design (optional)" />
-
-  <h2>Design Choices & Rationale</h2>
+  <h2>Design Rationale</h2>
   <ul>
-    <li><strong>Scatterplot (Release Year vs Duration):</strong> This chart visualizes how the length of shows has changed over time. I encoded type (Movie or TV Show) using color and cast size (as a popularity proxy) using circle size.</li>
-    <li><strong>Bar Chart (Genre vs Country):</strong> To explore global trends, I broke down the top combinations of genre and country. This helps reveal regional preferences in Netflix content.</li>
-    <li><strong>Line Chart (Releases Over Time):</strong> This clearly shows how Netflix’s content library has grown over the years, peaking in certain years.</li>
-    <li><strong>Dropdown Filters:</strong> Users can filter content by type (Movie/TV) and rating (G, PG, etc.) to focus on specific subsets of data.</li>
+    <li><strong>Scatterplot:</strong> Duration vs. release year, colored by type and sized by cast size.</li>
+    <li><strong>Bar Chart:</strong> Top genre-country combinations show regional content patterns.</li>
+    <li><strong>Line Chart:</strong> Trends of release counts over time to reflect Netflix growth.</li>
+    <li><strong>Dropdown Filters:</strong> Allow filtering by content type and rating for targeted insights.</li>
   </ul>
 
-  <h2>Insights & Discoveries</h2>
+  <h2>Insights & Findings</h2>
   <ul>
-    <li>Netflix dramatically expanded content releases around 2017–2019.</li>
-    <li>TV Shows often have shorter durations (1 Season = 60 minutes assumed), while movies vary widely in length.</li>
-    <li>Genres like “Drama” and “International Movies” appear across many countries, especially the United States, India, and the UK.</li>
-    <li>The largest casts appear in Bollywood or action films, which boosts circle size in the scatterplot.</li>
+    <li>Netflix’s biggest release surge occurred from 2017 to 2019.</li>
+    <li>Genres like “Drama” and “International Movies” appear most often across regions.</li>
+    <li>TV shows consistently use “1 Season” as duration, estimated as 60 minutes in the visual.</li>
   </ul>
 
   <h2>Video Walkthrough</h2>
-  <p>Below is a short video walkthrough of the project, showing how users can interact with the filters and charts.</p>
-  <iframe src="https://www.youtube.com/embed/DjV9Z6Px0sU" frameborder="0" allowfullscreen></iframe>
-
-  <h2>Source Code & Live Site</h2>
   <p>
-    <a href="https://yourusername.github.io/netflix-viz/">Live Visualization</a> |
-    <a href="https://github.com/yourusername/netflix-viz">GitHub Repo</a>
+    Below is a quick walkthrough showing how to interact with the project:
+  </p>
+  <iframe 
+    src="https://www.youtube.com/embed/DjV9Z6Px0sU" 
+    title="Netflix Visualization Walkthrough"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+
+  <h2>Project Links</h2>
+  <p>
+    🔗 <a href="https://siemkif.github.io/D3-Visualization-/">Live Visualization</a><br />
+    💻 <a href="https://github.com/SiemKif/D3-Visualization-">GitHub Repository</a>
   </p>
 
 </body>
